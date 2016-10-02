@@ -82,14 +82,13 @@ public class BlogHome extends AppCompatActivity {
         });
     }
     public void WriteBtn(View v) {
-        // add-write text into file
+
         try {
             FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_PRIVATE);
             OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
             outputWriter.write(textmsg.getText().toString());
             outputWriter.close();
-
-            //display file saved message
+            
             Toast.makeText(getBaseContext(), "File saved in internal storage successfully!",
                     Toast.LENGTH_SHORT).show();
 
@@ -98,11 +97,11 @@ public class BlogHome extends AppCompatActivity {
         }
     }
     public void writePublic(View v){
-        String content = "hello world";
+        String content = textmsg.getText().toString();
         File file;
         FileOutputStream outputStream;
         try {
-            file = new File(Environment.getExternalStorageDirectory(), "MyCache");
+            file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),"My Cache");
 
             outputStream = new FileOutputStream(file);
             outputStream.write(content.getBytes());

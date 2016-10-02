@@ -19,5 +19,137 @@
         android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mahitha.assignment_3.UpdateDetails">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update your Details"
+            android:id="@+id/textView11"
+            android:layout_margin="15dp"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:textSize="45dp"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/textView12"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:focusableInTouchMode="false"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/ET_name"
+            android:layout_margin="10dp"
+            android:longClickable="true"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:editable="true" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:id="@+id/textView13"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:focusableInTouchMode="false"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ET_username"
+            android:layout_margin="10dp"
+            android:longClickable="true"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:editable="true" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:id="@+id/textView14"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:focusableInTouchMode="false"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/ET_email"
+            android:layout_margin="10dp"
+            android:longClickable="true"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:editable="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:id="@+id/textView15"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:focusableInTouchMode="false"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/ET_password"
+            android:layout_margin="10dp"
+            android:longClickable="true"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:editable="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:id="@+id/Bupdate"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_margin="10dp"
+            android:background="#ccbf6666" />
+
+    </LinearLayout>
 </ScrollView>

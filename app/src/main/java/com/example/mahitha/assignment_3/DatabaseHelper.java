@@ -64,20 +64,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void deleteContact(Contact contact){
-        db = this.getReadableDatabase();
+        db = this.getWritableDatabase();
         String u_name = contact.getUsername();
-        String query = "delete * from contacts where uname = "+u_name;
-        db.execSQL(query);
+        db.execSQL("DELETE FROM " + TABLE_NAME + " WHERE " + COLUMN_UNAME + "=\"" + u_name + "\";");
         db.close();
-        /*if(COLUMN_UNAME.equals(contact.getUsername())){
-            int id  = contact.getId();
-            db.delete(DatabaseHelper.TABLE_NAME, DatabaseHelper.COLUMN_ID
-                    + " = " + id, null);
-        }
-        */
     }
 
-    public void updateContact(){
+    public void updateContact(Contact contact, Contact c){
+        db = this.getWritableDatabase();
+        deleteContact(c);
+
+        ContentValues values = new ContentValues();
+
+        String query = "select * from contacts";
+        Cursor cursor = db.rawQuery(query, null);
+        int count = cursor.getCount();
+
+        values.put(COLUMN_ID, count);
+        values.put(COLUMN_NAME, contact.getName());
+        values.put(COLUMN_UNAME, contact.getUsername());
+        values.put(COLUMN_EMAIL, contact.getEmail());
+        values.put(COLUMN_PASS, contact.getPassword());
+
+        db.insert(TABLE_NAME, null, values);
+
+        db.close();
 
     }
 
