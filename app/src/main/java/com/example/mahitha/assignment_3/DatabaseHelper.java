@@ -70,9 +70,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void updateContact(Contact contact, Contact c){
+    public void updateContact(Contact contact){
         db = this.getWritableDatabase();
-        deleteContact(c);
 
         ContentValues values = new ContentValues();
 

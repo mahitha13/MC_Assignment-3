@@ -27,18 +27,18 @@ public class UpdateDetails extends AppCompatActivity {
             uname = et_uname.getText().toString();
             password = et_pass.getText().toString();
             name = et_name.getText().toString();
-
-            Contact c = new Contact();
             Contact contact = new Contact();
             contact.username = getIntent().getStringExtra("username");
+            helper.deleteContact(contact);
+            Contact c = new Contact();
             c.setName(name);
             c.setEmail(email);
             c.setUsername(uname);
             c.setPassword(password);
 
-            helper.updateContact(c,contact);
+            helper.updateContact(c);
 
-            Intent intent = new Intent(getApplicationContext(), BlogHome.class);
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
         }
 
